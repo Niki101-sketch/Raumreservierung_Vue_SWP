@@ -1,0 +1,107 @@
+/* Globales, schlichtes Styling für die ganze App */
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --danger: #dc2626;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+.topbar {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.topbar h1 { margin: 0; font-size: 1.4rem; }
+.topbar nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.topbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+.topbar a:hover { background: rgba(255, 255, 255, 0.15); }
+/* router-link-exact-active wird von Vue Router automatisch auf den aktiven Link gesetzt */
+.topbar a.router-link-exact-active { background: rgba(255, 255, 255, 0.25); }
+
+.container { max-width: 1000px; margin: 0 auto; padding: 1.5rem 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.card, .form, .booked, .table {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.card { padding: 1rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.card h3 { margin: 0; }
+.card p { margin: 0; }
+.card .btn { margin-top: auto; text-align: center; }
+
+.badges { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.5rem 0; }
+.badge {
+  background: #e0e7ff;
+  color: #3730a3;
+  font-size: 0.8rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn:hover { background: var(--primary-dark); }
+.btn:disabled { opacity: 0.6; cursor: wait; }
+.btn-danger { background: var(--danger); padding: 0.3rem 0.7rem; font-size: 0.85rem; }
+.btn-danger:hover { background: #b91c1c; }
+
+.form { max-width: 480px; padding: 1.25rem; display: flex; flex-direction: column; gap: 0.9rem; }
+.form label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; font-size: 0.9rem; flex: 1; }
+.form input, .form select {
+  font: inherit;
+  font-weight: normal;
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.row { display: flex; gap: 1rem; }
+
+.booked { max-width: 480px; margin-top: 1.25rem; padding: 1rem 1.25rem; }
+.booked h3 { margin-top: 0; font-size: 1rem; }
+
+.table { width: 100%; border-collapse: collapse; overflow: hidden; }
+.table th, .table td { padding: 0.6rem 0.8rem; text-align: left; border-bottom: 1px solid var(--border); }
+.table th { background: #f9fafb; font-size: 0.85rem; color: var(--muted); }
+
+.muted { color: var(--muted); }
+.error { color: var(--danger); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .table { display: block; overflow-x: auto; }
+}

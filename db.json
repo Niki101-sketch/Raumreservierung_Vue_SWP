@@ -1,0 +1,81 @@
+{
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Raum 101",
+      "building": "Hauptgebäude",
+      "capacity": 30,
+      "equipment": [
+        "Beamer",
+        "Whiteboard"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Raum 102",
+      "building": "Hauptgebäude",
+      "capacity": 25,
+      "equipment": [
+        "Whiteboard"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "EDV-Saal 1",
+      "building": "Werkstättengebäude",
+      "capacity": 20,
+      "equipment": [
+        "20 PCs",
+        "Beamer"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Besprechungsraum",
+      "building": "Verwaltung",
+      "capacity": 8,
+      "equipment": [
+        "Bildschirm",
+        "Konferenztelefon"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Turnsaal",
+      "building": "Sporthalle",
+      "capacity": 60,
+      "equipment": [
+        "Lautsprecher"
+      ]
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "roomId": 1,
+      "name": "Max Mustermann",
+      "date": "2026-10-20",
+      "from": "08:00",
+      "to": "09:40",
+      "purpose": "SWP-Unterricht"
+    },
+    {
+      "id": 2,
+      "roomId": 3,
+      "name": "Anna Huber",
+      "date": "2026-10-21",
+      "from": "10:00",
+      "to": "11:40",
+      "purpose": "Projektarbeit"
+    },
+    {
+      "id": 3,
+      "roomId": 4,
+      "name": "Lehrerteam",
+      "date": "2026-10-22",
+      "from": "13:00",
+      "to": "14:00",
+      "purpose": "Besprechung"
+    }
+  ]
+}
