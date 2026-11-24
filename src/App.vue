@@ -4,7 +4,7 @@
 -->
 <template>
   <header class="topbar">
-    <h1>🏫 Raumreservierung</h1>
+    <h1>Raumreservierung</h1>
     <nav>
       <RouterLink to="/">Räume</RouterLink>
       <RouterLink to="/reservieren">Reservieren</RouterLink>

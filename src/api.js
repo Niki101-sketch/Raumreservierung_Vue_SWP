@@ -1,7 +1,7 @@
 // =====================================================================
 // api.js – ALLE Server-Zugriffe der App passieren hier mit fetch().
 // Der Server ist json-server (läuft auf Port 3000 und liest db.json).
-//
+
 // REST-Prinzip:
 //   GET    = Daten holen
 //   POST   = neuen Datensatz anlegen
